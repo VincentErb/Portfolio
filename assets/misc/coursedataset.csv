@@ -1,0 +1,31 @@
+Name of report;Type;UF;Done
+Service Oriented Architecture;Report;middleware;ok
+Semantic Web;Report;data;ok
+R Big Data;Report;data;ok
+Software-Defined Radios;Report;communication;ok
+OM2M;Report;middleware;ok
+Datasheet;Report;smart;WIP
+MOSH Project README;Report;smart;ok
+TRIZ ;Report;humanity;ok
+Wireless IoT ;Report;communication;ok
+Zigbee protocol study;Report;communication;ok
+Emerging Networks;Report;communication;TODO
+MAC Layer for IoT;Report;communication;
+Innovation ethics project study;Report;humanity;ok
+Social psychology ethics study;Report;humanity;ok
+Alison project video 1;Video;project;ok
+Alison project video 2;Video;project;WIP
+Alison project website;Website;project;ok
+Portfolio;Website;project;
+KiCAD presentation;Slides;smart;
+Zigbee protocol presentation;Slides;communication;ok
+Trump vs OS 3G 6G;Slides;communication;ok
+MAC Layer for IoT presentation;Slides;communication;
+Innovation project first pitch;Slides;humanity;ok
+Innovation project final pitch;Slides;humanity;ok
+Social psychology stereotypes presentation;Slides;humanity;ok
+Hackaton pitch;Slides;hackaton;ok
+English first project pitch;Slides;humanity;ok
+English november project review;Slides;humanity;ok
+English december project review;Slides;humanity;ok
+Final project presentation;Slides;humanity;
