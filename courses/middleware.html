@@ -126,7 +126,7 @@
         </div>
         <div class="row">
           <div class="col-lg-4 pr-3">
-            <p>The Middleware & Service course or module gathers <b>three courses</b> that study different technologies used 
+            <p>The Middleware & Service course or module gathers <b>three classes</b> that study different technologies used 
             today in IoT for different purposes. First, we had a class about Service Oriented Architecture, the main standard used 
             today to develop Web Services, that are a prominent part of the web today. Then, we studied the middleware platform OM2M,
             which goal is to ensure interoperability between all types of sensors and applications, a crucial problematic of IoT. 
@@ -205,10 +205,11 @@
           the project, we could also directly put the value of a certain sensor or actuator, by sending a direct request to OM2M. It is by using this that we could 
           verify that the scenarios were indeed working and that changing the value of a sensor above a fixed threshold triggered an actuator.
         </p>
-        
-         <div class="mt-3 mb-4 mr-4">
-          <img src="../assets/img/om2m_project.png" alt="OM2M tree developed during the project">
-          <p style="text-align: center; font-size: smaller;"><b>Screenshot of the administration dashboard</b></p>
+      
+
+        <div class="mt-4 mb-4 mx-5">
+          <img class="testshadow " src="../assets/img/dashboard.PNG" alt="Screenshot of the administration dashboard">
+          <p class="mt-3" style="text-align: center; font-size: smaller;"><b>Screenshot of the administration dashboard</b></p>
         </div> 
         
         <p>It is important to note that this project was linked to the <b>Software Engineering</b> class, present in the data analysis module. Indeed, we did this project 
@@ -216,6 +217,9 @@
           but we still were able to use powerful management tools thanks to it. You can find detailed explanation 
         of this part in the descriptive part of the data analysis module by clicking on <a href="./data.html#desc">this link</a>. </p>
 
+        <div style="text-align: center;">
+          <a target="_blank" class="btn btn-primary mt-4" href="../assets/misc/SOA_Report.pdf">View project report (PDF)</a>
+        </div>
 
       <div id="technical part">
         <div class="title">
@@ -225,24 +229,84 @@
         <h4>Middleware for IoT</h4>
         <hr style="height:1px;border:none;color:rgb(199, 196, 192);background-color:rgb(199, 196, 192);" />
 
-        <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae id cumque nostrum enim hic 
-          reprehenderit iure, voluptatem fuga quasi expedita nisi maiores suscipit. Eligendi expedita quaerat quia possimus dolorum eius.</p>
+        <p class="mb-0">The middleware class had its main technical challenges during the laboratories that preceded the SOA project. 
+          These labs were design to have us practice with the OM2M platform on real-life examples, and even with real devices. The 
+          main difficulty was understanding the nomenclature and the specificities of the OM2M standard. There is not a lot of documentation 
+          online yet, as the standard is pretty recent, so it was complicated to fully understand how OM2M functionned and what it could do.
+        </p>
+        <p>Thanks to the explanations of our lab tutors and a lot of exchange between peers, I was able to understand the platform well and use 
+          it accordingly.
+        </p>
 
         <div class="mb-4 ml-4 mr-3">
           <img src="../assets/img/om2m_schema.png" alt="Context of the OM2M labs">
           <p style="text-align: center; font-size: smaller;"><b>Fully functioning LoRa module for our sensor</b></p>
         </div> 
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ipsum expedita! Nesciunt hic, dolorum vero fugit voluptate 
-          ut maxime vitae explicabo molestias, sed labore libero eum corporis expedita nemo laudantium?</p>
-        <p>PENSER A LINKER RAPPORT</p>
+        <p>There were four labs, but the main difficulty appeared in the third and fourth labs. In them, we were tasked to input real sensors and 
+          smart lights, a Philips Hue connected bulb and a Fibraro light sensor in our case. As you can see on the preceding schematic, our task 
+          was to use OM2M as the middleware which would get light intensity data and act on the Philips Hue accordingly. We also used the node-red 
+          tool, a really useful graphic API software which also proved useful in the <a href="./smartdevices.html#mosh">Smart Devices</a> module.
+        </p>
+        
+        <div style="text-align: center;">
+          <a target="_blank" class="btn btn-primary mt-4" href="../assets/misc/om2m_report_erb_péfau.pdf">View lab report (PDF)</a>
+        </div>
 
         <h4>Service Oriented Architecture</h4>
         <hr style="height:1px;border:none;color:rgb(199, 196, 192);background-color:rgb(199, 196, 192);" />
-        <p>Petite liste à puce avec petit schéma à droite des logos des technos utilisées dans le projet ?</p>
+        <p>The technical challenges of SOA were mainly present in the project, but it mostly came from the many different technologies that the class 
+          had us manipulate even before the project started, with a lot of tutorials. The main idea was to be able to create and deploy Web services, 
+          but there exists many different frameworks to do that: 
+        </p>
+        <ul>
+          <li class="mb-2" style="font-size: 15px;"><b>SOAP: </b>it is probably the techonolgy we looked at the most during the lectures and the tutorials. The technical difficulty with it 
+            was mainly that it is a pretty ageing technology, so we were faced with a lot of compatibility problems to run it smoothly. We were using a 
+            downgraded version of Eclipse and still had some issues to run servers correctly. </li>
+          <li class="mb-2" style="font-size: 15px;"><b>BPEL: </b> we did not view a lot of BPEL during the tutorials, but it is still worth mentionning. It is a graphical tool, 
+            which allows to design and create Web services and more importantly to orchestrate the communication between different Web services. It seemed to be 
+            pretty powerful, however there was a steep learning curve and it did not feel that it made the process easier than managing services in a more classical textual way.</li>
+          <li class="mb-2" style="font-size: 15px;"><b>REST: </b>probably the most popular standard to build APIs and Web services, we used REST in the context of Java, using the Jersey 
+            library. It is a pretty familiar library, however the main technical challenges here came from the fact that it is pretty uncommon to use Java and Jersey for big projects 
+            involving many services. It is hard to juggle between java projects and work collaboratively with a team.</li>
+          <li class="mb-2" style="font-size: 15px;"><b>Microservices with Spring Boot: </b>this is a framework that was covered during the last two tutorials, at about the same time that we 
+            started the SOA project. It helps with creating simple Web services and deploy them very easily. However, I chose not to focus on this technology and use the 
+            more widely used REST instead. Here, the technicak challenge might have been not using Spring Boot and have more difficulty with rest. I still managed to reach my 
+            objectives with REST, fortunately.</li>
+        </ul>
         
         <h4>Cloud & Autonomic management</h4>
         <hr style="height:1px;border:none;color:rgb(199, 196, 192);background-color:rgb(199, 196, 192);" />
+
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="../assets/img/openstack.PNG" alt="Architecture of the project">
+            <p style="text-align: center; font-size: smaller;"><b>Topology of Openstack virtual network</b></p>
+          </div>
+          <div class="col-lg-8">
+            <p class="mt-3">The Cloud and Autonomic management class consisted of only two lectures, directly followed by five laboratories that 
+              were really important. We studied mainly two elements: hosted virtual machines and containers using VirtualBox, and bare virtual machines using the Openstack platform. </p>
+              <ul>
+                <li class="mb-2" style="font-size: 15px;"><b>VirtualBox & Docker: </b>The first technology we experimented was VirtualBox. I already used it to create Linux virtual machines on my 
+                  Windows laptop, to use Linux-only applications. Using it for this lab was a pretty similar process, but it is what we did with it that was different and challenging. We started two 
+                  VMs and started two containers on them using Docker. We tested the main operations on containers, mainly the creation of images and takins snapshots. We saw that containers are really 
+                  useful to deploy large scale applications that run over multiple servers who all need the same OS and same configuration.</li>
+                <li class="mb-2" style="font-size: 15px;">
+                  <b>Openstack: </b>Next, we used a different technology to study its different characteristics: Openstack. It is a bare hosted virtual machine service, meaning that it provides VMs 
+                  that are running directly on the server's hardware, and you can administrate them through a web interface. Openstack also allows for Network virtualization, and it was the biggest challenge
+                  for me. As you can see on the adjacent image, we created complex network topologies with wirtual sub local networks, routers and virtual machines. It was really interesting to change routes 
+                  between virtual networks and see connectivity between machines that were not on a physical network but on a virtual one. We had to use this method to set up a calculator application, 
+                  with the front-end of the app accessible from the outside world on a public network, and then all the back-end services hidden in an other local network, linked with a virtual gateway.
+                </li>
+              </ul>
+          </div>
+        </div>
+
+        <p>ADD SECOND LAB INFO IF NECESSARY</p>
+
+        <div style="text-align: center;">
+          <a target="_blank" class="btn btn-primary mt-4" href="../assets/misc/om2m_report_erb_péfau.pdf">View lab report (PDF)</a>
+        </div>
 
        
      </div>
@@ -296,20 +360,21 @@
         <a href="" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal">How to read the skills matrix? Click here</a>
         <div class="row">
           <div class="col-lg-5">
-            <p>The smart devices module was probably the course that required the widest array of technical skills from this year. Also, 
-              it was one of the least oriented towars software skills, relying more on electronics, signal processing and physics knowledge.  
-              Understandably, the requirements for my IR profile were a bit lower than in other classes. However, I still feel that I acquired the 
-              required skills and in some parts, maybe more.
+            <p>The middleware & service module was the most oriented towards skills of IR students. Consequently, the expected level for all skills in 
+              the maxtrix is the maximum, mastery level. 
             </p>
-            <p>For the <b>Introduction to sensors</b> class, my physics and chemistry background from the first, more general years at INSA 
-            really helped me to alleviate any potential struggle. The initial formation was enough for me to follow the requirements. As for the 
-            datasheet redaction, I feel that working in a group of 9 people where we exchanged a lot of ideas made me reach a level of expertise 
-            that is above what I expected at first.</p>
-            <p>As for the <b>Microcontroller and Open-Source Hardware</b> project, I felt really invested because microcontrollers and low-level 
-            applications are a domain that I really like. I already had some skills from previous INSA projects or personal projects on Raspberry Pi 
-            for example, so it was easy for me to translate these experiences and use them for this project. I would say the KiCad PCB conception was 
-            quite difficult to master as first and the analog acquisition circuit involved notions that were a little bit far away in my memory,
-             but eventually I got the results I expected.</p>
+            <p>The <b>Service Oriented Architecture</b> class was the biggest of them all, with a lot of tutorials and then a big, time-consuming project. 
+              I already had experience with Web services in REST in my summer internship, and I am very fond of Java, which I practice at INSA and for 
+              personal projects. These two elements made it possible for me to understand and master all the technical skills of the class. The concepts 
+              presentend that I did not know about were clear and well-documented online, so I feel like I will retain these skills and be able to reuse them 
+              easily in my career.
+            <p>The <b>Middleware for Internet of Things</b> class was different, in that I did not know anything about it specifically prior to the class. However, 
+              I still knew of HTTP REST requests, which was a huge help since OM2M offers to use REST as its main API. I feel like during the labs, and especially 
+              during the project where I was the one in charge of OM2M, I really learned how to use and master the platform.
+            </p>
+            <p>As for the <b>Cloud & Autonomic computing</b> class, it was pretty disconnected from the other two, while still having a lot of technical similarities. 
+              Most of the teaching was learning of theoretical concepts that I partially knew from computer culture, and I feel like the five lab sessions were enough 
+              for me to take in the main skills of the class.</p>
           </div>
 
           <div class="col-lg-7">
@@ -442,40 +507,33 @@
 
         <hr style="height:1px;border:none;color:rgb(199, 196, 192);background-color:rgb(199, 196, 192);" />
 
-        <div class="row">
-          <div class="col-lg-8">
-            <p>Overall, this course if one of my favourites of the year, mainly because it was the chance to follow the entire process 
-              of creation of a sensor, from nano-particle deposition to analog circuit or PCB designing and finally LoRa communication. 
-              To me, it is the course that encaptures the spirit of ISS the most, and I really felt that I was acquiring a really wide 
-              array of skills, and even more being with peers having a different background than mine. I also really liked the level of 
-              freedom I had and how adapted the class seemed to be for every background. Notably, the ability to choose to go for a long 
-              project if we felt confident, or going through more guided laboratories if we were not was a really good idea. In retrospect, 
-              I'm really happy to have chosen the project, despite my computer science background, and having to decide and show confidence 
-              to choose it really is a bonus.</p>
-            <p>I also really liked and benefited from all the complementary classes to the main project directly helping with everything. In most 
-              other courses, the classes are pretty disconnected from each other and we sometimes can't make the link as to why these classes are 
-              put together in the first place. In this module, I really felt like every class was useful to me in the realization of the required 
-              projects.
-            </p>
-            <p>However, everything was not perfect, and the flow of the different modules coming together was a little derailed by some timing 
-              issues with the placement of the classes. For example, we did not have the analogic electronic labs before starting to design our PCB
-              which was directly based on the circuits we would develop in the labs. We ended by simply copying a circuit that was given to us. Also, the KiCad PCBS presentations occured too late in the semester 
-              for INSA to manufacture them, so we did not get the chance to use the LoRa module we developped with the sensor we created, and used 
-              an already existing sensor instead. Less of a problem but still to be noted, the Optical sensors class felt a little bit disconnected 
-              from everything else, even though I quite like it for scientific culture reasons.
-            </p>
-            <p>Despite these problems, I feel like this module was one of the ones I felt the most invested in, and I can confidently say that I have 
-              learned a lot of skills that I would not have, had I chosen another orientation than ISS.
-            </p>
-      
-          </div>
-          <div class="col-lg-4">
-            <div class="mt-5">
-              <img class="" src="../assets/img/smartflow.png" alt="Ideal flow of the course">
-              <p class="mt-3" style="text-align: center; font-size: smaller;"><b>Ideal flow of the course</b></p>
-            </div> 
-          </div>
-        </div>
+        <p>This module was pretty interesting because it contained two classes, SOA and OM2M, that work really well together and really benefit from sharing 
+          a common project. Similarly to the Smart Devices module, you can really how the skills learned in one class matter and are directly use in the other. 
+          Sadly, the Cloud management class, which could have also benefitted from being linked to the other two, took place months after the others, and felt 
+          pretty disconnected from everything else. I assume this is because of timetable issues trying to fit all the classes, or mayne keeing the cloud class 
+          next to communication classes for the Network virtualization part, but I think I would have really enjoyed an even bigger project regrouping the three 
+          classes.
+        </p>
+
+        <p>I really liked how the three classes were pretty different in overall content, but still echoed each other a lot, relying on the same core concepts, mainly Web 
+          services and server constraints and problematics. It did not feel like repetition, and really made me get comfortable with the theoretical concepts and 
+          technologies we used.
+        </p>
+
+        <p>On a personal level, maybe because of my background in IR and with my internship, I really liked the big project we had for SOA. It was heavily 
+          criticized by some of my peers, but to me personally it was the kind of large scale project that really allows to see the power of a technology and 
+          why it is used so widely in the industry. It is often hard to really illustrate technologies and framework in a limited lab environment, but I feel 
+          like it succeeded here.  
+        </p>
+
+        <p>I think that overall, merging the OM2M labs with the SOA project would have been really cool, as a way to implement real sensors and actuators into our project,
+          and not just some simulated ones. It would also add more tutored hours for the project, as it had to be widely done on our free time and some maybe did not get 
+          prepared enough for the specific technical targets of the project. 
+        </p>
+        
+        <p>This was also the opportunity for me to work on a project with a lot of autonomy for team and time management. I was really invested in the project, and 
+          was happy to put in hours to work on it and see the results at the end.
+        </p>
 
       </div>
     </div>
